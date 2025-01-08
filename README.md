@@ -1,148 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit's Portfolio</title>
+    <title> Rohit - GitHub Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
+            padding-top: 40px;
         }
-        /* Header Section */
+
         header {
-            background: linear-gradient(135deg, #6a1b9a, #d32f2f);
-            color: #fff;
             text-align: center;
-            padding: 50px 20px;
-            position: relative;
+            padding: 20px;
+            background-color: #6a1b9a;
+            color: #fff;
         }
+
         header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
         }
+
         header p {
             font-size: 1.2rem;
         }
-        header .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            margin: 20px auto;
-            display: block;
-            object-fit: cover;
+
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
         }
 
-        /* Hamburger Menu Styles */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        .hamburger div {
-            width: 30px;
-            height: 4px;
-            background-color: #fff;
-            margin: 4px 0;
-            transition: all 0.3s ease;
-        }
-
-        /* Navigation Menu */
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            background: #6a1b9a;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 10px 20px;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: background 0.3s ease;
-        }
-        nav a:hover {
-            background: #d32f2f;
-            border-radius: 5px;
-        }
-
-        /* Responsive Navigation */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            nav {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                background: #6a1b9a;
-                position: absolute;
-                top: 70px;
-                right: 10px;
-                width: 200px;
-                border-radius: 8px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            }
-            nav.active {
-                display: flex;
-            }
-            nav a {
-                margin: 10px 0;
-            }
-        }
-
-        /* Main Content Styling */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
+        section h2 {
             color: #6a1b9a;
-            border-bottom: 2px solid #6a1b9a;
-            padding-bottom: 5px;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
-        ul {
+
+        .projects ul {
             list-style: none;
             padding: 0;
         }
-        ul li {
-            margin-bottom: 10px;
-            font-size: 1rem;
+
+        .projects ul li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        ul li strong {
+
+        .projects strong {
             color: #d32f2f;
         }
-        dl dt {
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills ul li {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #6a1b9a;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
             font-weight: bold;
-            color: #333;
-            margin-top: 10px;
         }
-        dl dd {
-            margin-left: 20px;
-            margin-bottom: 10px;
-            color: #555;
+
+        footer a:hover {
+            text-decoration: underline;
         }
+
         blockquote {
             font-style: italic;
             margin: 20px 0;
@@ -151,78 +100,91 @@
             border-left: 4px solid #6a1b9a;
             color: #444;
         }
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info span {
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <!-- Profile Photo -->
-        <img src="your-photo.jpg" alt="Profile Photo" class="profile-photo">
-        <h1>Hello, I'm Rohit👋</h1>
-        <p>A passionate problem-solver & tech enthusiast</p>
-
-        <!-- Hamburger Menu -->
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-
-        <!-- Navigation Menu -->
-        <nav id="nav-menu">
-            <a href="desc.html">Description</a>
-            <a href="Flood Prediction.html">Flood Prediction</a>
-            <a href="Flood Evacuation.html">Flood Evacuation</a>
-            <a href="Flood Risk Mapping.html">Flood Risk Mapping</a>
-            <a href="Flood Drainage Network Optimization.html">Flood Drainage Network Optimization</a>
-            <a href="Program.html">Code</a>
-        </nav>
+        <h1>Hello, Rohit 👋</h1>
+        <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h2>Academic Details</h2>
-        <dl>
-            <dt>Course Name</dt>
-            <dd>Algorithmic Problem Solving</dd>
-            <dt>Course Code</dt>
-            <dd>24ECSC205</dd>
-            <dt>Name</dt>
-            <dd>Rohit</dd>
-            <dt>SRN</dt>
-            <dd>02FE23BCS074</dd>
-            <dt>University</dt>
-            <dd>KLE Technological University</dd>
-        </dl>
-        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
-
-        <!-- Project Section -->
-        <h2>Projects</h2>
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>🛠 Projects</h2>
         <ul>
-            <li><strong>Flood Management System</strong></li>
-        </ul>
+            <li>
+                <strong>Project 1: Flood Monitoring and Management System</strong>
+                <p>
+                    The Flood Monitoring and Management System is a comprehensive tool designed to enhance disaster preparedness and response.
+                    It intelligently processes vague or unclear environmental data inputs, narrows down risk zones through targeted analyses,
+                    ensures quick access to emergency facilities, and provides personalized evacuation and safety recommendations.
+                    With these four integrated modules, the system aims to provide timely and accurate guidance, empowering communities to make
+                    informed decisions while mitigating flood-related risks.
+                </p>
 
-        <!-- Skills Section -->
-        <h2>Skills</h2>
+                <h3>Modules:</h3>
+                <ul>
+                    <li><strong>1st Module: Flood Prediction:</strong> Uses environmental data (rainfall, river levels, soil moisture) with advanced algorithms like time-series analysis or machine learning models to predict the likelihood of flooding in specific areas.</li>
+                    <li><strong>2nd Module: Flood Evacuation:</strong> Based on real-time predictions, identifies at-risk populations and suggests evacuation plans using decision analysis techniques like decision trees.</li>
+                    <li><strong>3rd Module: Flood Risk Mapping:</strong> Generates detailed flood risk maps using topographical data and historical patterns to highlight high-risk areas using GIS (Geographic Information Systems).</li>
+                    <li><strong>4th Module: Flood Drainage Network Optimization:</strong> Optimizes the flood drainage network using graph-based algorithms like Dijkstra's algorithm to ensure efficient water flow and reduce flood impact.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <h2>🚀 Skills</h2>
         <ul>
-            <li>Programming Languages: C++, Python, C</li>
-            <li>Core Concepts: Data Structures and Algorithms</li>
+            <li>C++, Python, C</li>
+            <li>Data Structures and Algorithms</li>
         </ul>
-    </div>
+    </section>
 
-    <!-- Footer -->
+    <!-- Academic Details Section -->
+    <section class="academic">
+        <h2>📚 Academic Details</h2>
+        <div>
+            <p><span>Course Name:</span> Algorithmic Lab</p>
+            <p><span>Course Code:</span> 24ECSP205</p>
+            <p><span>Name:</span> Rohit </p>
+            <p><span>SRN:</span> 02FE23BCS074</p>
+            <p><span>Course Instructor:</span> Prof. Vaishali Parab</p>
+            <p><span>University:</span> KLE Technological University</p>
+            <p><span>Course Topic:</span> Flood Management System (Computer Science)</p>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section>
+        <blockquote>
+            “When something is important enough, you do it even if the odds are not in your favor.” – Elon Musk
+        </blockquote>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Rohit | <a href="#contact">Contact Me</a></p>
+        <p>&copy; 2025 Rohit | <a href="https://github.com/your-username" target="_blank">GitHub</a> | <a href="#contact">Contact Me</a></p>
     </footer>
 
-    <script>
-        // JavaScript for Hamburger Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    </script>
+    <!-- Contact Info (Optional) -->
+    <div id="contact" class="contact-info">
+        <h3>Contact Info</h3>
+        <p><span>Email:</span> your-email@example.com</p>
+        <p><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/your-profile/" target="_blank">LinkedIn Profile</a></p>
+    </div>
 </body>
+
 </html>
