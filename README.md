@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -175,7 +174,7 @@
             <a href="Flood Prediction.html">Flood Prediction</a>
             <a href="Flood Evacuation.html">Flood Evacuation</a>
             <a href="Flood Risk Mapping.html">Flood Risk Mapping</a>
-            <a href="Flood drainage nerwork optimization.html">Flood drainage nerwork optimization</a>
+            <a href="Flood Drainage Network Optimization.html">Flood Drainage Network Optimization</a>
             <a href="Program.html">Code</a>
         </nav>
     </header>
@@ -213,7 +212,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Vaibhav | <a href="#contact">Contact Me</a></p>
+        <p>&copy; 2025 Rohit | <a href="#contact">Contact Me</a></p>
     </footer>
 
     <script>
