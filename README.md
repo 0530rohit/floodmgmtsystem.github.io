@@ -36,9 +36,6 @@ I am passionate about technology and problem-solving. Here's a glimpse of my wor
 - C++, Python, C
 - Data Structures and Algorithms
 
-## 🌐 Find Me Online
-- [GitHub](https://github.com/0530rohit)
-
 
 ## Portfolio Topic
 
